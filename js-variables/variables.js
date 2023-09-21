@@ -9,4 +9,4 @@ console.log(`Javascript is: ${status}, ${num1}, ${num2}`);
 
 let password = "qwerty";
 password = "intiti";
-console.log("password");
+console.log(password);
