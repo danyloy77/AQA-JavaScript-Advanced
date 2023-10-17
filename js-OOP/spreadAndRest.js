@@ -60,19 +60,20 @@ console.log(`Залишок кепок на складі: ${hat.quantity}`);
 //Task 4
 
 class CarClass {
+#speed
     constructor(make, model, year) {
         this.make = make;
         this.model = model;
         this.year = year;
-        this.speed = 0;
+        this.#speed = 0;
     }
 
     accelerate(speed) {
-        this.speed += speed;
+        this.#speed += speed;
     }
 
     brake(speed) {
-        this.speed -= speed;
+        this.#speed -= speed;
     }
 
     getCarInfo() {
@@ -81,9 +82,10 @@ class CarClass {
 }
 
 class AudiClass extends CarClass {
+#color
     constructor(make, model, year, color) {
         super(make, model, year);
-        this.color = color;
+        this.#color = color;
     }
 
     getCarInfo() {
