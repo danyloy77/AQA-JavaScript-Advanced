@@ -1,0 +1,16 @@
+{
+  "name": "AQA-JavaScript-Advanced",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:danyloy77/AQA-JavaScript-Advanced.git",
+  "author": "danyloy77 <danylo.ya@corefy.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^13.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "prettier": "3.0.3"
+  }
+}

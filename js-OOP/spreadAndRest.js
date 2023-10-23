@@ -10,8 +10,8 @@ console.log(array3);
 //Task 2
 
 function multiply(multiplier, ...arguments) {
-    const result = arguments.map(item => item * multiplier);
-    return result;
+  const result = arguments.map((item) => item * multiplier);
+  return result;
 }
 
 const result = multiply(77, 2, 3, 6);
@@ -20,24 +20,24 @@ console.log(result);
 //Task 3
 
 class ProductClass {
-    constructor(name, price, quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-    }
+  constructor(name, price, quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+  }
 
-    getTotalPrice() {
-        return this.price * this.quantity;
-    }
+  getTotalPrice() {
+    return this.price * this.quantity;
+  }
 
-    purchase(quantity) {
-        if (quantity <= this.quantity && quantity > 0) {
-            this.quantity -= quantity;
-            console.log(`Покупка ${quantity} одиниць товару "${this.name}" виконана.`);
-        } else {
-            console.log(`Неможливо виконати покупку для товару "${this.name}".`);
-        }
+  purchase(quantity) {
+    if (quantity <= this.quantity && quantity > 0) {
+      this.quantity -= quantity;
+      console.log(`Покупка ${quantity} одиниць товару "${this.name}" виконана.`);
+    } else {
+      console.log(`Неможливо виконати покупку для товару "${this.name}".`);
     }
+  }
 }
 
 const tShirt = new ProductClass("Футболка", 50, 20);
@@ -60,45 +60,45 @@ console.log(`Залишок кепок на складі: ${hat.quantity}`);
 //Task 4
 
 class CarClass {
-#speed
-    constructor(make, model, year) {
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.#speed = 0;
-    }
+  #speed;
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.#speed = 0;
+  }
 
-    accelerate(speed) {
-        this.#speed += speed;
-    }
+  accelerate(speed) {
+    this.#speed += speed;
+  }
 
-    brake(speed) {
-        this.#speed -= speed;
-    }
+  brake(speed) {
+    this.#speed -= speed;
+  }
 
-    getCarInfo() {
-        console.log(`Car Info: ${this.make} ${this.model} (${this.year})`);
-    }
+  getCarInfo() {
+    console.log(`Car Info: ${this.make} ${this.model} (${this.year})`);
+  }
 }
 
 class AudiClass extends CarClass {
-#color
-    constructor(make, model, year, color) {
-        super(make, model, year);
-        this.#color = color;
-    }
+  #color;
+  constructor(make, model, year, color) {
+    super(make, model, year);
+    this.#color = color;
+  }
 
-    getCarInfo() {
-        console.log(`Car Info: ${this.make} ${this.model} (${this.year}), Color: ${this.color}`);
-    }
+  getCarInfo() {
+    console.log(`Car Info: ${this.make} ${this.model} (${this.year}), Color: ${this.color}`);
+  }
 
-    get myCurrentColor() {
-        return this.color;
-    }
+  get myCurrentColor() {
+    return this.color;
+  }
 
-    set myCurrentColor(color) {
-        this.color = color;
-    }
+  set myCurrentColor(color) {
+    this.color = color;
+  }
 }
 
 // Створення екземпляра класу AudiClass
@@ -112,39 +112,38 @@ myAudi.brake(20);
 myAudi.myCurrentColor = "Black";
 myAudi.getCarInfo();
 
-
 //Task 5
 
 class Person {
-    constructor(firstName, lastName, age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
 }
 
 class PeopleRegistry {
-    constructor() {
-        this.people = [];
-    }
+  constructor() {
+    this.people = [];
+  }
 
-    addPerson(person) {
-        this.people.push(person);
-    }
+  addPerson(person) {
+    this.people.push(person);
+  }
 
-    removePerson(firstName, lastName) {
-        this.people = this.people.filter(person => person.firstName !== firstName || person.lastName !== lastName);
-    }
+  removePerson(firstName, lastName) {
+    this.people = this.people.filter((person) => person.firstName !== firstName || person.lastName !== lastName);
+  }
 
-    findPerson(firstName, lastName) {
-        return this.people.find(person => person.firstName === firstName && person.lastName === lastName);
-    }
+  findPerson(firstName, lastName) {
+    return this.people.find((person) => person.firstName === firstName && person.lastName === lastName);
+  }
 
-    listPeople() {
-        this.people.forEach(person => {
-            console.log(`Name: ${person.firstName} ${person.lastName}, Age: ${person.age}`);
-        });
-    }
+  listPeople() {
+    this.people.forEach((person) => {
+      console.log(`Name: ${person.firstName} ${person.lastName}, Age: ${person.age}`);
+    });
+  }
 }
 
 const registry = new PeopleRegistry();
@@ -160,9 +159,9 @@ registry.listPeople();
 
 const foundPerson = registry.findPerson("Roman", "Romanovich");
 if (foundPerson) {
-    console.log("Знайдена особа:", foundPerson);
+  console.log("Знайдена особа:", foundPerson);
 } else {
-    console.log("Особу не знайдено.");
+  console.log("Особу не знайдено.");
 }
 
 registry.removePerson("John", "Doe");

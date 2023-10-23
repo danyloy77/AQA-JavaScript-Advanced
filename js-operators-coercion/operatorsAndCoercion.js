@@ -8,8 +8,7 @@ let user1 = "Lida";
 let user2 = "Roma";
 let greeting = "Hi, " + user1 + " and " + user2 + "!";
 console.log(greeting);
-console.log(user1.concat(' ',user2,' ',greeting));
-
+console.log(user1.concat(" ", user2, " ", greeting));
 
 //-------------------- 3
 
@@ -18,15 +17,16 @@ let num = parseFloat(inputString);
 let isNotNaN = !isNaN(inputString);
 let roundedNumber = num.toFixed(1);
 let backToString = num.toString();
-console.log("Parse to number: " , num, typeof num);
-console.log("Is non NaN: " , isNotNaN);
+console.log("Parse to number: ", num, typeof num);
+console.log("Is non NaN: ", isNotNaN);
 console.log("Rounded value:", roundedNumber);
 console.log("Parse to string:", backToString, typeof backToString);
 
 //---------- 4
-let wiki = "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikipedia Foundation.";
+let wiki =
+  "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikipedia Foundation.";
 console.log("String length: ", wiki.length);
-console.log("Replace Wiki: ", wiki.replaceAll("Wikipedia","Intiti"));
+console.log("Replace Wiki: ", wiki.replaceAll("Wikipedia", "Intiti"));
 console.log('Include "world"?', wiki.includes("world"));
 console.log('End "Foundation"?', wiki.endsWith("Foundation."));
 
@@ -39,7 +39,7 @@ console.log(circleArea);
 let length = 10;
 let width = 7;
 let rectangleArea = length * width;
-rectangleArea=rectangleArea.toFixed(2);
+rectangleArea = rectangleArea.toFixed(2);
 console.log(rectangleArea);
 
 let height = 15;
